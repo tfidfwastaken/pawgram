@@ -41,6 +41,25 @@ arf
 ##### Output:
 
     henlo world
+(Your dog might do this more efficiently)
+## Syntax
+You start out with a 30000 byte array and a pointer to it.
+
+|token|command|
+|-----|-------|
+|woof |increment current byte|
+|grr |decrement current byte|
+|ruff |increment pointer|
+|yowl |decrement pointer|
+|arf |output the byte currently pointed at|
+|mlem |input into the byte currently pointed at|
+
+### Looping
+
+All instructions between `fwip-fwip` and `bow-wow` are looped until the value of current byte becomes zero.
+
 _(language may or may not be a total ripoff of brainh*ck)_
+
+---
 
 Implemented using racket.

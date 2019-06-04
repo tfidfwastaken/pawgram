@@ -1,0 +1,1 @@
+("7.3" racket ("c12185c42208ab82d8be7407e408b5cbee91e72d" . "9bcec204614c2b5204e5c9f5dfd99c7e39ea32b8") (collects #"pawgram" #"reader.rkt") (collects #"racket" #"base.rkt") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt"))

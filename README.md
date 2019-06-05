@@ -38,13 +38,15 @@ yowl yowl yowl yowl yowl yowl yowl ruff ruff ruff ruff ruff ruff ruff ruff ruff 
 grr grr grr grr arf woof woof woof woof yowl yowl yowl yowl yowl yowl yowl yowl yowl yowl yowl yowl yowl
 arf 
 ```
-### Setup and Usage
-_coming soon_
 
 ##### Output:
 
     henlo world
 (Your dog might do this more efficiently)
+
+## Setup and Usage
+_coming soon_
+
 ## Syntax
 You start out with a 30000 byte array and a pointer to it.
 

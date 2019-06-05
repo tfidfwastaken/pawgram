@@ -19,7 +19,11 @@
     [(_ op-or-loop-arg ...)
      #'(begin
          (define first-apl (list (make-vector 30000 0) 0))
-         (void (fold-funcs first-apl (list op-or-loop-arg ...))))]))
+         (void (fold-funcs first-apl (list op-or-loop-arg ...))))]
+    [else
+     (raise-syntax-error
+      'pawgram-start
+      (display "if you are seeing this message then you're thoroughly heckin bamboozled"))]))
 (provide pawgram-start)
 
 (define-syntax (loop stx)
@@ -29,7 +33,9 @@
          (for/fold ([current-apl (list arr ptr)])
                    ([i (in-naturals)]
                     #:break (zero? (apply current-byte current-apl)))
-           (fold-funcs current-apl (list op-or-loop-arg ...))))]))
+           (fold-funcs current-apl (list op-or-loop-arg ...))))]
+    [else
+     (raise-syntax-error 'loop (display "your loop is dog poop"))]))
 (provide loop)
 
 (define-syntax (op stx)
@@ -39,7 +45,9 @@
     [((~literal op) "ruff") #'inc-ptr]
     [((~literal op) "yowl") #'dec-ptr]
     [((~literal op) "arf") #'print]
-    [((~literal op) "mlem") #'scan]))
+    [((~literal op) "mlem") #'scan]
+    [else
+     (raise-syntax-error 'op (display "invalid operashun"))]))
 (provide op)
 
 (define (current-byte arr ptr) (vector-ref arr ptr))

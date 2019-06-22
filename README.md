@@ -44,6 +44,8 @@ arf
     henlo world
 (Your dog might do this more efficiently)
 
+[**More Examples Here**](examples.md)
+
 ## Setup and Usage
 _coming soon_
 
